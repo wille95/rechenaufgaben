@@ -24,13 +24,7 @@ for i in range (min,max+1):
                  Prim.remove(i) # Zahl aus Zahlenreihe entfernen
                  break          # Bricht die innere For-schleife ab
 
-print(Prim)
+print(Prim)                     # Liste Primzahlen ausgeben
 
 
 
-
-
-
-
-for i in range (0,i+1): 
-    print(Primzahlen[i])
