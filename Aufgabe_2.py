@@ -2,8 +2,8 @@
 
 
 # Aufgabe 2:
-# Sie bauen ein Haus und wollen wissen wieviel Geld Sie bei einer 
-# bestimmten Summe und einem bestimmten Zinssatz monatlich zahlen müssen, wenn Sie in 10 Jahren schuldenfrei sein wollen.
+# Sie bauen ein Haus und wollen wissen wieviel Geld Sie bei einer bestimmten Summe und einem bestimmten Zinssatz 
+# monatlich zahlen müssen, wenn Sie in 10 Jahren schuldenfrei sein wollen.
 
 Jahre = 10              # in 10 Jahren soll abbezahlt sein
 Monate = Jahre * 12     # Wie viele Monate insgesamt
