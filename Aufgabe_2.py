@@ -24,11 +24,11 @@ while (Rest > Tilgung):
     Rest = Rest - Tilgung                  # Tilgung vom Rest abziehen
 
 
-Gesamtkosten = Haus + Gesamtzinsen + Rest
-Kosten = Gesamtkosten / Monate
+Gesamtkosten = Haus + Gesamtzinsen + Rest   # Gesamtkosten berechnen
+Kosten = Gesamtkosten / Monate              # Kosten pro Monat berechnen
                        
 # Diverse Ausgaben
 print("Die Gesamten Zinsen auf das Haus sind: {0}".format(round(Gesamtzinsen,2)))
 print("Die Gesamtkosten für das Haus sind: {0}".format(round(Gesamtkosten,2)))
-print("Es müssen montalich {0} Euro für das Haus bezahlt werden.".format(round(Kosten,2)))
+print("Es müssen im Durchschnitt montalich {0} Euro für das Haus bezahlt werden.".format(round(Kosten,2)))
 
