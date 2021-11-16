@@ -10,12 +10,12 @@ Monate = Jahre * 12     # Wie viele Monate insgesamt
 
 Haus = int(input("Wie teuer war das Haus? "))           # Wie teuer ist das Haus?
 Zinssatz = int(input("Wie hoch ist der Zinssatz? "))    # Wie hoch ist der Jahreszinssatz
-Tilgung = Haus // Jahre                                 # Welche Monatliche Tilgung ist erforderlich?
+Tilgung = Haus // Jahre                                # Welche Monatliche Tilgung ist erforderlich?
 Gesamtzinsen = 0                                        # Variable für Gesamtzinsen 
 Haus_allein = Haus                                      # Variable zur Berechnung
 
 while Haus != 0 :                                       # Bedingung bis Haus ungleich 0 ist, soll...                       
-    Zinsen = Haus * Zinssatz/100                        # Berechnung Zinsen pro Jahr
+    Zinsen = Haus * Zinssatz/100 * 1/12                      # Berechnung Zinsen pro Jahr
     Haus = Haus - Tilgung                               # Was kostet das Haus nach der Tilgung pro Jahr
     Gesamtzinsen = Zinsen + Gesamtzinsen                # Zusammenrechnung der Gesamtzinsen
 
