@@ -10,25 +10,21 @@ Haus = int(input("Wie teuer war das Haus? "))           # Wie teuer ist das Haus
 Zinssatz = int(input("Wie hoch ist der Zinssatz? "))    # Wie hoch ist der Jahreszinssatz
 Jahre = int(input("wie viele Jahre soll der Kredit abbezahlt werden?")) # Wie viel Jahre abbezhalen
 
-Monate = Jahre * 12     # Wie viele Monate insgesamt
-Rest = Haus             # Rest zuweisen zur Berechnung
-Gesamtzinsen = 0        # Gesamtzisnen zweisen für Berechnung
+# Annuitätsdarlehnen
+# Beispiel: Ein Annuitätendarlehen von 100.000 EUR soll in 20 Jahren bei einem Zinssatz von 6 % 
+# in monatlichen Zahlungsterminen zurückgezahlt werden. Der Annuitätenfaktor ist für diese Daten 0,087185. 
+# Der jährliche zu zahlende Betrag ist damit 100.000 • 0,087185 = 8.718,50 EUR.
+# Der monatliche Betrag ist damit 8718,50 / 12 = 726,54 EUR
 
-Tilgung = Haus / Monate  #Tilgung pro Jahr berechnen
+Zinsfaktor = Zinssatz/100   # Zinsfaktor
 
-print("Die Monatliche Tilgung ist: {0}".format(round(Tilgung,2)))
+Annuität = (((1+Zinsfaktor)**Jahre)*Zinsfaktor)/(((1+Zinsfaktor)**Jahre) - 1)   # Berechnung des Annuitätendarlehen
 
-while (Rest > Tilgung):
-    Zinsen = Rest * ((Zinssatz / 100) / 12) # Zinsberechnung
-    Gesamtzinsen = Zinsen + Gesamtzinsen    # Gesamtzinsen hochaddieren
-    Rest = Rest - Tilgung                  # Tilgung vom Rest abziehen
+Kosten_pro_Jahr = Annuität * Haus       # Berechnung der Kosten pro Jahr
+
+Monatsbetrag = Kosten_pro_Jahr / 12     # Berechnung der Kosten pro Monat
 
 
-Gesamtkosten = Haus + Gesamtzinsen + Rest   # Gesamtkosten berechnen
-Kosten = Gesamtkosten / Monate              # Kosten pro Monat berechnen
-                       
-# Diverse Ausgaben
-print("Die Gesamten Zinsen auf das Haus sind: {0}".format(round(Gesamtzinsen,2)))
-print("Die Gesamtkosten für das Haus sind: {0}".format(round(Gesamtkosten,2)))
-print("Es müssen im Durchschnitt montalich {0} Euro für das Haus bezahlt werden.".format(round(Kosten,2)))
+print("Es müssen im Durchschnitt montalich {0} Euro für das Haus bezahlt werden.".format(round(Monatsbetrag,2)))
 
+# Quelle = http://www.wirtschaftslexikon24.com/d/annuitaetenfaktor/annuitaetenfaktor.htm
